@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" maxHeight="800.0" maxWidth="802.0" minHeight="600.0" minWidth="680.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.AdminBookingController">
+   <children>
+      <VBox alignment="TOP_CENTER" stylesheets="@../../../../CSS/Table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <HBox minWidth="680.0" prefWidth="680.0">
+               <children>
+                  <Button fx:id="btnSearch" minHeight="30.0" minWidth="60.0" mnemonicParsing="false" onAction="#searchEvent" styleClass="button_primary" stylesheets="@../../../../CSS/button.css" text="Search" />
+                  <TextField fx:id="inputSearch" minHeight="30.0" minWidth="200.0" onAction="#searchEvent" />
+                  <DatePicker fx:id="datePick" minHeight="30.0" minWidth="200.0" onAction="#searchEvent">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <ComboBox fx:id="comboBoxTime" minHeight="30.0" minWidth="200.0" onAction="#searchEvent" promptText="Choose Time">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <AnchorPane>
+               <children>
+                  <TableView fx:id="tableBooking" minHeight="500.0" minWidth="680.0" prefHeight="500.0" prefWidth="680.0" stylesheets="@../../../../CSS/Table.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="bookingId" maxWidth="80.0" minWidth="75.0" prefWidth="-1.0" text="Booking ID" />
+                        <TableColumn fx:id="userId" maxWidth="80.0" minWidth="75.0" prefWidth="-1.0" text="User ID" />
+                        <TableColumn fx:id="petId" maxWidth="80.0" minWidth="75.0" prefWidth="-1.0" text="Pet ID" />
+                        <TableColumn fx:id="serviceId" maxWidth="80.0" minWidth="75.0" prefWidth="-1.0" text="Service ID" />
+                        <TableColumn fx:id="price" maxWidth="90.0" minWidth="78.0" prefWidth="-1.0" text="Price" />
+                        <TableColumn fx:id="bookingDate" maxWidth="130.0" minWidth="100.0" prefWidth="-1.0" text="Booking Date" />
+                        <TableColumn fx:id="bookingTime" maxWidth="130.0" minWidth="100.0" prefWidth="-1.0" text="Booking Time" />
+                        <TableColumn fx:id="updateDate" maxWidth="130.0" minWidth="100.0" prefWidth="-1.0" text="Update Date" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

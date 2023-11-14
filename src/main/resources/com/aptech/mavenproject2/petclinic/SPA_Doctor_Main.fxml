@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aptech.mavenproject2.petclinic.DoctorMainController">
+    <children>
+        <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <AnchorPane style="-fx-background-color: #eee2dc;" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <BorderPane prefWidth="300.0">
+                                    <center>
+                                        <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../../../Img/logo.png" />
+                                            </image>
+                                        </ImageView>
+                                    </center>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                    <bottom>
+                                        <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Button fx:id="btnHome" mnemonicParsing="false" onAction="#getHome" prefHeight="70.0" prefWidth="300.0" styleClass="button_deffault" stylesheets="@../../../../CSS/button.css" text="Home" />
+                                                <Button fx:id="btnBooking" mnemonicParsing="false" onAction="#getBooking" prefHeight="70.0" prefWidth="300.0" styleClass="button_deffault" stylesheets="@../../../../CSS/button.css" text="Booking" />
+                                                <Button fx:id="btnSchedule" mnemonicParsing="false" onAction="#getSchedule" prefHeight="70.0" prefWidth="300.0" styleClass="button_deffault" stylesheets="@../../../../CSS/button.css" text=" Your Schedule" />
+                                                <Button fx:id="btnInfo" mnemonicParsing="false" onAction="#getUserInfo" prefHeight="70.0" prefWidth="300.0" styleClass="button_deffault" stylesheets="@../../../../CSS/button.css" text="Your Info" />
+                                                <Button mnemonicParsing="false" onAction="#SignOut" prefHeight="30.0" prefWidth="60.0" styleClass="button_primary" stylesheets="@../../../../CSS/button.css" text="Log Out">
+                                                    <VBox.margin>
+                                                        <Insets top="240.0" />
+                                                    </VBox.margin>
+                                                </Button>
+                                            </children>
+                                            <BorderPane.margin>
+                                                <Insets top="-50.0" />
+                                            </BorderPane.margin>
+                                        </VBox>
+                                    </bottom>
+                                </BorderPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </left>
+            <center>
+                <AnchorPane styleClass="admin_background" stylesheets="@../../../../CSS/Admin.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox alignment="TOP_CENTER" maxHeight="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label fx:id="labelTitlePage" alignment="CENTER" layoutX="245.0" prefHeight="50.0" text="Welcome to Pet Clinic">
+                                    <font>
+                                        <Font name="System Bold" size="30.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </Label>
+                                <AnchorPane minHeight="400.0" minWidth="600.0">
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                    <children>
+                                        <BorderPane fx:id="mainPage" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

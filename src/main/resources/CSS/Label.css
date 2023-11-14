@@ -1,0 +1,7 @@
+.label_error{
+    -fx-text-fill : red;
+}
+.label_warning{
+    -fx-text-fill: gold;
+}
+

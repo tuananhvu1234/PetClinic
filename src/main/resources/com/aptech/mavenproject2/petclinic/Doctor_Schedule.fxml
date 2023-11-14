@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Doctor.DoctorScheduleController">
+    <center>
+        <Pane prefHeight="702.0" prefWidth="774.0" style="-fx-background-color: #f1f2f6;" styleClass="admin_background" stylesheets="@../../../../CSS/Admin.css" BorderPane.alignment="CENTER">
+            <children>
+            <TextField fx:id="txtScheduleId" layoutX="338.0" layoutY="70.0" visible="false" />
+                <GridPane layoutX="140.0" layoutY="103.0" prefHeight="113.0" prefWidth="534.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.20001220703125" minWidth="10.0" prefWidth="81.59998779296876" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="502.40001983642577" minWidth="10.0" prefWidth="452.80001220703133" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="205.60000610351562" minHeight="10.0" prefHeight="101.80001220703124" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="126.39998779296874" minHeight="0.0" prefHeight="86.19998168945312" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label layoutX="10.0" layoutY="206.0" prefHeight="18.0" prefWidth="178.0" text="Time" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <RadioButton fx:id="morning" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="time" />
+                     </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="afternoon" layoutX="180.0" layoutY="144.0" mnemonicParsing="false" text="Afternoon" toggleGroup="$time" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="120.0" />
+                            </GridPane.margin>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                        </RadioButton>
+                        <Label layoutX="10.0" layoutY="86.0" prefHeight="30.0" prefWidth="216.0" text="Date">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                  <DatePicker fx:id="doctorScheduleDate" prefHeight="26.0" prefWidth="462.0" GridPane.columnIndex="1" />
+                  <RadioButton fx:id="all" layoutX="211.0" layoutY="105.0" mnemonicParsing="false" text="All" toggleGroup="$time" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="253.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                    </children>
+                </GridPane>
+            <TableView fx:id="tableDoctorSchedule" layoutX="137.0" layoutY="353.0" prefHeight="332.0" prefWidth="551.0">
+              <columns>
+                <TableColumn fx:id="scheduleID" prefWidth="108.0" text="ID" />
+                <TableColumn fx:id="scheduleDate" minWidth="0.0" prefWidth="286.4000244140625" text="Date" />
+                  <TableColumn fx:id="scheduleTime" minWidth="0.0" prefWidth="145.5999755859375" text="Time" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnSearch" contentDisplay="RIGHT" layoutX="140.0" layoutY="303.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="55.0" styleClass="button_primary" stylesheets="@../../../../CSS/button.css" text="Search" />
+                  <Button fx:id="btnSave" contentDisplay="RIGHT" layoutX="624.0" layoutY="249.0" mnemonicParsing="false" prefWidth="60.0" styleClass="button_success" stylesheets="@../../../../CSS/button.css" text="Save" />
+                  <Button fx:id="btnReset" contentDisplay="RIGHT" layoutX="554.0" layoutY="249.0" mnemonicParsing="false" prefWidth="60.0" styleClass="button_danger" stylesheets="@../../../../CSS/button.css" text="Reset" />
+                  <Button fx:id="btnRefresh" contentDisplay="RIGHT" layoutX="484.0" layoutY="249.0" mnemonicParsing="false" prefWidth="60.0" styleClass="button_primary" stylesheets="@../../../../CSS/button.css" text="Refresh" />
+            <DatePicker fx:id="txtSearch" layoutX="212.0" layoutY="303.0" onAction="#search" prefHeight="26.0" prefWidth="462.0" />
+            </children>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Pane>
+    </center>
+</BorderPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="600.0" maxWidth="680.0" minHeight="600.0" minWidth="680.0" prefHeight="600.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Customer.CustomerBookingController">
+   <center>
+          <GridPane alignment="CENTER" maxWidth="600.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="73.00000610351563" minHeight="10.0" prefHeight="73.00000610351563" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="109.60001220703124" minHeight="10.0" prefHeight="66.99998168945314" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="73.59999389648438" minHeight="10.0" prefHeight="73.59999389648438" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="73.59999389648438" minHeight="10.0" prefHeight="73.59999389648438" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="73.59999389648438" minHeight="10.0" prefHeight="73.59999389648438" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="73.59999389648438" minHeight="10.0" prefHeight="73.59999389648438" vgrow="SOMETIMES" />
+              </rowConstraints>
+              <children>
+                  <Label prefHeight="30.0" prefWidth="171.0" text="Doctor" GridPane.rowIndex="2">
+                      <font>
+                          <Font size="20.0" />
+                      </font>
+                  </Label>
+            <Label layoutX="10.0" layoutY="32.0" prefHeight="30.0" prefWidth="171.0" text="Booking Date">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="bookingDate" maxWidth="1.7976931348623157E308" prefHeight="30.0" GridPane.columnIndex="1" />
+            <Label layoutX="10.0" layoutY="105.0" prefHeight="30.0" prefWidth="171.0" text="Booking Time" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="152.0" prefHeight="30.0" prefWidth="171.0" text="Service Type" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="172.0" prefHeight="30.0" prefWidth="171.0" text="Service Name" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                        <Button contentDisplay="RIGHT" minHeight="30.0" minWidth="50.0" mnemonicParsing="false" onAction="#reset" styleClass="button_danger" stylesheets="@../../../../CSS/button.css" text="Reset">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                        <Button contentDisplay="RIGHT" minHeight="30.0" minWidth="50.0" mnemonicParsing="false" onAction="#add" styleClass="button_success" stylesheets="@../../../../CSS/button.css" text="Save">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <RadioButton fx:id="morning" mnemonicParsing="false" text="Morning">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="time" />
+                     </toggleGroup>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="afternoon" mnemonicParsing="false" text="Afternoon" toggleGroup="$time">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </HBox>
+            <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <ComboBox fx:id="listName" minHeight="30.0" minWidth="200.0" onAction="#getChoseService" />
+                  <TextArea fx:id="listServiceChose" editable="false" wrapText="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextArea>
+               </children>
+            </HBox>
+            <ComboBox fx:id="chooseDoctor" maxHeight="30.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="chooseStype" maxHeight="30.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+              </children>
+          </GridPane>
+   </center>
+</BorderPane>

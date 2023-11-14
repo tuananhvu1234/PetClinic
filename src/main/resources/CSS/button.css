@@ -1,0 +1,79 @@
+.button_deffault
+{
+    /*-fx-effect: unset;*/
+    -fx-font-family: "System";
+    -fx-background-color :  transparent;
+    -fx-background-radius : 0px;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill : #000000;
+}
+.button_deffault:hover{
+    -fx-background-color : #F6E8E1;
+}
+.button_deffault:pressed
+{
+    -fx-background-color : #947E72;
+    -fx-text-fill : #FFF;
+}
+
+.button_active {
+    /*-fx-effect: unset;*/
+    -fx-font-family: "System";
+    -fx-background-color : #947E72;
+    -fx-background-radius : 0px;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-text-fill : #fff;
+}
+.button_active:hover {
+    -fx-background-color : #F6E8E1;
+}
+.button_active:disabled {
+    -fx-opacity: 1;
+}
+
+.button_primary
+{
+    /*-fx-effect: unset;*/
+    -fx-background-color :  #1c80be;
+    -fx-background-radius : 5px;
+    -fx-text-fill : #ffffff;
+}
+.button_primary:hover{
+    -fx-background-color : #2e8cc7;
+}
+.button_primary:pressed
+{
+    -fx-background-color : #225f85;
+}
+
+.button_success
+{
+    /*-fx-effect: unset;*/
+    -fx-background-color :  #0dc56f;
+    -fx-background-radius : 5px;
+    -fx-text-fill : #ffffff;
+}
+.button_success:hover{
+    -fx-background-color : #3fc486;
+}
+.button_success:pressed
+{
+    -fx-background-color : #198754;
+}
+
+.button_danger
+{
+    /*-fx-effect: unset;*/
+    -fx-background-color :  #dc3545;
+    -fx-background-radius : 5px;
+    -fx-text-fill : #ffffff;
+}
+.button_danger:hover{
+    -fx-background-color : #d45763;
+}
+.button_danger:pressed
+{
+    -fx-background-color : #a02935;
+}

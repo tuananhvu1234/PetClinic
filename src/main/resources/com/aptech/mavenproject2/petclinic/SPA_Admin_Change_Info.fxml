@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxWidth="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.AdminChangeInfoController">
+    <children>
+        <AnchorPane layoutX="131.0" layoutY="12.0">
+         <children>
+            <Pane layoutY="-2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+               <children>
+                  <GridPane layoutY="7.0" prefHeight="400.0" prefWidth="537.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.20001220703125" minWidth="10.0" prefWidth="178.5999755859375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="411.3999481201172" minWidth="10.0" prefWidth="363.4000244140625" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="152.8000061035156" minHeight="10.0" prefHeight="99.79998168945312" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="162.39999389648438" minHeight="10.0" prefHeight="99.00001831054686" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="162.39999389648438" minHeight="10.0" prefHeight="99.00001831054686" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="162.39999389648438" minHeight="10.0" prefHeight="99.00001831054686" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="162.39999389648438" minHeight="10.0" prefHeight="99.00001831054686" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="162.39999389648438" minHeight="10.0" prefHeight="99.00001831054686" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="162.39999389648438" minHeight="10.0" prefHeight="99.00001831054686" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="162.39999389648438" minHeight="10.0" prefHeight="99.00001831054686" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="162.39999389648438" minHeight="10.0" prefHeight="99.00001831054686" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Full Name">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="134.0" maxWidth="1.7976931348623157E308" text="Password" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="193.0" maxWidth="1.7976931348623157E308" text="Confirm password" GridPane.rowIndex="8">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="109.0" maxWidth="1.7976931348623157E308" text="Date of birth" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="246.0" maxWidth="1.7976931348623157E308" text="Gender" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="292.0" maxWidth="1.7976931348623157E308" text="Email" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="340.0" maxWidth="1.7976931348623157E308" text="Address" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="10.0" layoutY="387.0" maxWidth="1.7976931348623157E308" text="Phone number" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfFullName" maxWidth="1.7976931348623157E308" prefHeight="30.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="tfAddress" maxWidth="1.7976931348623157E308" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="tfEmail" maxWidth="1.7976931348623157E308" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="tfPhone" maxWidth="1.7976931348623157E308" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="tfUsername" maxWidth="1.7976931348623157E308" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <DatePicker fx:id="dpDob" maxWidth="1.7976931348623157E308" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Username" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="tfPassword" maxHeight="30.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <RadioButton fx:id="rbMale" mnemonicParsing="false" prefHeight="42.0" prefWidth="69.0" text="Male">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="gender" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="rbFemale" mnemonicParsing="false" prefHeight="42.0" prefWidth="85.0" text="Female" toggleGroup="$gender" />
+                              <RadioButton fx:id="rbOther" mnemonicParsing="false" prefHeight="42.0" prefWidth="74.0" text="Other" toggleGroup="$gender" />
+                           </children>
+                        </HBox>
+                        <PasswordField fx:id="tfConfirm" maxHeight="30.0" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                     </children>
+                  </GridPane>
+                  <Button layoutX="467.0" layoutY="436.0" mnemonicParsing="false" onAction="#add" prefHeight="35.0" prefWidth="70.0" styleClass="button_success" stylesheets="@../../../../CSS/button.css" text="Save" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="380.0" layoutY="436.0" mnemonicParsing="false" onAction="#getData" prefHeight="35.0" prefWidth="70.0" styleClass="button_primary" stylesheets="@../../../../CSS/button.css" text="Refresh" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children></AnchorPane>
+    </children>
+</Pane>

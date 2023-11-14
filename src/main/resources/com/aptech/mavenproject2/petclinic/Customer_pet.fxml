@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Customer.CustomerPetController">
+    <center>
+        <Pane prefHeight="542.0" prefWidth="698.0" style="-fx-background-color: #f1f2f6;" styleClass="customer_homepage_center" stylesheets="@../../../../CSS/Customer.css" BorderPane.alignment="CENTER">
+            <children>
+                <GridPane layoutX="156.0" layoutY="137.0" prefHeight="274.0" prefWidth="527.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.20001220703125" minWidth="10.0" prefWidth="170.7999755859375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="494.2" minWidth="10.0" prefWidth="355.6000244140625" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="73.59999389648438" minHeight="10.0" prefHeight="73.59999389648438" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="73.00000610351563" minHeight="10.0" prefHeight="73.00000610351563" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="109.60001220703124" minHeight="10.0" prefHeight="66.99998168945314" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="130.4000061035156" minHeight="10.0" prefHeight="60.80003662109374" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="56.799963378906284" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label prefHeight="30.0" prefWidth="171.0" text="Name">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="206.0" prefHeight="18.0" prefWidth="178.0" text="Gender" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="186.0" prefHeight="18.0" prefWidth="178.0" text="Pet Type" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="petName" prefHeight="20.0" prefWidth="372.0" promptText="Enter pet name" GridPane.columnIndex="1" />
+                        <RadioButton fx:id="male" mnemonicParsing="false" text="Male" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="gender" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="female" layoutX="180.0" layoutY="144.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="120.0" />
+                            </GridPane.margin>
+                        </RadioButton>
+                  <RadioButton fx:id="dog" mnemonicParsing="false" prefHeight="30.0" prefWidth="68.0" text="Dog" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="type" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="cat" layoutX="196.0" layoutY="125.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0" text="Cat" toggleGroup="$type" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="120.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <Label layoutX="10.0" layoutY="176.0" prefHeight="18.0" prefWidth="178.0" text="Pet Weight" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="petWeight" layoutX="155.0" layoutY="34.0" prefHeight="20.0" prefWidth="372.0" promptText="Enter pet weight" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label prefHeight="18.0" prefWidth="178.0" text="Pet Age (Month)" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="petAge" layoutX="164.0" layoutY="211.0" prefHeight="20.0" prefWidth="372.0" promptText="Enter pet age (month)" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    </children>
+                </GridPane>
+                  <Button fx:id="btnSave" contentDisplay="RIGHT" layoutX="642.0" layoutY="424.0" mnemonicParsing="false" onAction="#add" styleClass="button_success" stylesheets="@../../../../CSS/button.css" text="Save" />
+            </children>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Pane>
+    </center>
+</BorderPane>

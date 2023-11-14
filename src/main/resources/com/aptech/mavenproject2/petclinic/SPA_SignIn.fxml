@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="600.0" maxWidth="600.0" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignController.SignInController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="60.0" layoutY="126.0">
+         <children>
+            <Label alignment="CENTER" text="Sign In">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="140.0" text="Username:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="inputTextUsername" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="340.0" promptText="Username" GridPane.columnIndex="1" />
+                  <Label fx:id="errorUsername" maxWidth="1.7976931348623157E308" styleClass="label_error" stylesheets="@../../../../CSS/Label.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="45.0" prefHeight="40.0" prefWidth="140.0" text="Password:" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="inputTextPassword" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="340.0" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="errorPassword" maxWidth="1.7976931348623157E308" styleClass="label_error" stylesheets="@../../../../CSS/Label.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <CheckBox fx:id="inputCBoxRemember" mnemonicParsing="false" text="Remember Me" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#isCompleteForm" prefHeight="40.0" prefWidth="100.0" styleClass="button_primary" stylesheets="@../../../../CSS/button.css" text="Sign In" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="200.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <Label text="Don't have account?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink fx:id="linkSignUp" focusTraversable="false" onAction="#goToSignUp" text="Sign Up Now" underline="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Hyperlink>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

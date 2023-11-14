@@ -1,0 +1,3 @@
+remember=true
+username=doctor
+password=123456

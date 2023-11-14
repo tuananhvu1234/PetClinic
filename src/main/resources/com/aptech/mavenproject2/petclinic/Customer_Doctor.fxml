@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Customer.CustomerDoctorController">
+    <center>
+      <Pane prefHeight="651.0" prefWidth="744.0" styleClass="admin_background" stylesheets="@../../../../CSS/Admin.css" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableDoctor" layoutX="28.0" layoutY="122.0" prefHeight="460.0" prefWidth="702.0">
+              <columns>
+                <TableColumn fx:id="ColsNo" prefWidth="75.0" text="No." />
+                <TableColumn fx:id="ColsName" prefWidth="198.3999786376953" text="Doctor Name" />
+                  <TableColumn fx:id="ColsEmail" prefWidth="243.2000732421875" text="Email" />
+                  <TableColumn fx:id="ColsPhone" prefWidth="183.5999755859375" text="Phone Number" />
+              </columns>
+            </TableView>
+            <TextField fx:id="inputSearch" layoutX="407.0" layoutY="88.0" onAction="#searchEvent" prefHeight="26.0" prefWidth="323.0" />
+            <Button fx:id="btnSearch" layoutX="355.0" layoutY="88.0" mnemonicParsing="false" onAction="#searchEvent" styleClass="button_primary" stylesheets="@../../../../CSS/button.css" text="Search" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

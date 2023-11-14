@@ -1,0 +1,51 @@
+Tính năng:
+
+admin: xem thêm sửa xóa người dùng,
+            xem thêm sửa xóa thuốc,
+            xem thêm sửa xóa booking.
+
+bsi: xem thêm sửa xóa thông tin,
+       xem thêm sửa xóa lịch lm vc,
+       xem thêm đơn thuốc,
+       xem booking.
+
+cus: xem thêm sửa xóa thông tin,
+        xem thêm sửa xóa thú cung,
+        xem dịch vụ,
+        xem bsi.
+
+functions
+
+1, login / sign in (done)
+- validation:
+    + empty input / input length = 0 (ok)
+    + no space (ok)
+    + sql injection (ok)
+- functions:
+    + remember me (ok)
+    + login / sign in (ok)
+    + link to sign up / regis (ok)
+- use method:
+    + validation:
+    + error:
+    + link:
+
+2, sign up / regis (done)
+    + sign up / regis
+    + validation
+    + error
+    + link
+
+3, sign out / log out
+    + sign up / regis
+    + validation
+    + error
+    + link
+
+4, homepage
+    + admin homepage:
+        - functions?
+    + doctor homepage:
+        - functions?
+    + client homepage:
+        - functions?

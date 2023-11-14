@@ -1,0 +1,16 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Dec 5, 2022, 4:52:29 PM
+    Author     : Hoang Anh
+*/
+.customer_homepage{
+    -fx-background-image:url(../Img/customer-background.jpg);
+}
+
+.customer_homepage_center{
+    -fx-background-image:url(../Img/customer-background.jpg);
+    -fx-background-size: cover;
+}

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="600.0" maxWidth="680.0" minHeight="600.0" minWidth="680.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Admin.AdminHomepageController">
+    <children>
+      <AnchorPane maxHeight="600.0" maxWidth="680.0" minHeight="600.0" minWidth="680.0">
+         <children>
+            <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <AnchorPane maxHeight="300.0" maxWidth="500.0" BorderPane.alignment="CENTER">
+                     <children>
+                  <!--        <Label alignment="CENTER" layoutX="245.0" prefHeight="50.0" text="Welcome to Pet Clinic">
+                              <font>
+                                  <Font name="System Bold" size="30.0" />
+                              </font>
+                          </Label>-->
+                          <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hBox" stylesheets="@../../../../CSS/Admin.css" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="0.0">
+                              <children>
+                                  <GridPane>
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="80.8" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.5999755859375" minWidth="10.0" prefWidth="119.2" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                      <children>
+                                          <ImageView fitHeight="49.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                                              <image>
+                                                  <Image url="@../../../../Img/calendar-icon.png" />
+                                              </image>
+                                              <GridPane.margin>
+                                                  <Insets left="20.0" />
+                                              </GridPane.margin>
+                                          </ImageView>
+                                          <Text fx:id="countAppointment" strokeType="OUTSIDE" strokeWidth="0.0" text="24" GridPane.columnIndex="1">
+                                              <font>
+                                                  <Font size="20.0" />
+                                              </font>
+                                              <GridPane.margin>
+                                                  <Insets bottom="16.0" />
+                                              </GridPane.margin>
+                                          </Text>
+                                          <Text fill="#8e8787" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Today" GridPane.columnIndex="1">
+                                              <GridPane.margin>
+                                                  <Insets top="23.0" />
+                                              </GridPane.margin>
+                                          </Text>
+                                      </children>
+                                  </GridPane>
+                              </children>
+                          </HBox>
+                          <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hBox" stylesheets="@../../../../CSS/Admin.css" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <children>
+                                  <GridPane>
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.2000732421875" minWidth="10.0" prefWidth="80.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                      <children>
+                                          <ImageView fitHeight="49.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                                              <image>
+                                                  <Image url="@../../../../Img/doctor-icon.png" />
+                                              </image>
+                                              <GridPane.margin>
+                                                  <Insets left="20.0" />
+                                              </GridPane.margin>
+                                          </ImageView>
+                                          <Text fx:id="countDoctor" strokeType="OUTSIDE" strokeWidth="0.0" text="24" GridPane.columnIndex="1">
+                                              <font>
+                                                  <Font size="20.0" />
+                                              </font>
+                                              <GridPane.margin>
+                                                  <Insets bottom="16.0" />
+                                              </GridPane.margin>
+                                          </Text>
+                                          <Text fill="#8e8787" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctors" GridPane.columnIndex="1">
+                                              <GridPane.margin>
+                                                  <Insets top="23.0" />
+                                              </GridPane.margin>
+                                          </Text>
+                                      </children>
+                                  </GridPane>
+                              </children>
+                          </HBox>
+                          <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hBox" stylesheets="@../../../../CSS/Admin.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="200.0">
+                              <children>
+                                  <GridPane>
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="81.60003662109375" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.39996337890625" minWidth="10.0" prefWidth="118.39996337890625" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                      <children>
+                                          <ImageView fitHeight="49.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                                              <image>
+                                                  <Image url="@../../../../Img/employee_icon.png" />
+                                              </image>
+                                              <GridPane.margin>
+                                                  <Insets left="20.0" />
+                                              </GridPane.margin>
+                                          </ImageView>
+                                          <Text fx:id="countClient" strokeType="OUTSIDE" strokeWidth="0.0" text="24" GridPane.columnIndex="1">
+                                              <font>
+                                                  <Font size="20.0" />
+                                              </font>
+                                              <GridPane.margin>
+                                                  <Insets bottom="16.0" />
+                                              </GridPane.margin>
+                                          </Text>
+                                          <Text fill="#8e8787" strokeType="OUTSIDE" strokeWidth="0.0" text="Client" GridPane.columnIndex="1">
+                                              <GridPane.margin>
+                                                  <Insets top="23.0" />
+                                              </GridPane.margin>
+                                          </Text>
+                                      </children>
+                                  </GridPane>
+                              </children>
+                          </HBox>
+                          <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hBox" stylesheets="@../../../../CSS/Admin.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+                              <children>
+                                  <GridPane>
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.199951171875" minWidth="10.0" prefWidth="81.59990234375" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.20009765625001" minWidth="10.0" prefWidth="119.20009765625001" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                      <children>
+                                          <ImageView fitHeight="49.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                                              <image>
+                                                  <Image url="@../../../../Img/account-icon.png" />
+                                              </image>
+                                              <GridPane.margin>
+                                                  <Insets left="20.0" />
+                                              </GridPane.margin>
+                                          </ImageView>
+                                          <Text fx:id="countAccount" strokeType="OUTSIDE" strokeWidth="0.0" text="24" GridPane.columnIndex="1">
+                                              <font>
+                                                  <Font size="20.0" />
+                                              </font>
+                                              <GridPane.margin>
+                                                  <Insets bottom="16.0" />
+                                              </GridPane.margin>
+                                          </Text>
+                                          <Text fill="#8e8787" strokeType="OUTSIDE" strokeWidth="0.0" text="Accounts" GridPane.columnIndex="1">
+                                              <GridPane.margin>
+                                                  <Insets top="23.0" />
+                                              </GridPane.margin>
+                                          </Text>
+                                      </children>
+                                  </GridPane>
+                              </children>
+                          </HBox>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+    </children>
+</Pane>

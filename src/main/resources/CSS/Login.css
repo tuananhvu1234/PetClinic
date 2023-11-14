@@ -1,0 +1,18 @@
+.login-btn{
+    -fx-background-color: #123c69;
+    -fx-cusor: pointer;
+    -fx-text-fill : #FFF;
+}
+
+.login_background{
+    -fx-background-image:url(../Img/login-background.jpg);
+    -fx-background-size:cover;
+    /*    -fx-background-position: center;
+        -fx-background-repeat: no-repeat;*/
+}
+
+/*.grid_pane{
+    -fx-background-color:  rgba(0, 0, 0, 0.6);
+    -fx-width: 100%;
+}*/
+
